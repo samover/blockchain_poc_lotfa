@@ -15,8 +15,8 @@ class ContractCreator extends Component {
         return (
             <div>
                 <div id="page-title">
-                    <h2>New bill of loading</h2>
-                    <p>Create a new bill of loading</p>
+                    <h2>New bill of lading</h2>
+                    <p>Create a new bill of lading</p>
                 </div>
                 <div className="row">
                     <div className="panel col-md-5">

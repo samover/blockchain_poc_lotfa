@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import { Link } from 'react-router';
 
 class Dashboard extends Component {
     constructor() {
         super();
-        this.state = { transactions: [] };
+        this.state = {transactions: []};
     }
 
     componentDidMount() {
@@ -124,7 +125,7 @@ class Dashboard extends Component {
     render() {
         var transactions = this.state.transactions.map((transaction, i) => {
             return (
-                <tr key={i} onClick={this.goToContract.bind(this, transaction)} style={{ cursor: 'pointer' }}>
+                <tr key={i} onClick={this.goToContract.bind(this, transaction)} style={{cursor: 'pointer'}}>
                     <td>{transaction.id + i}</td>
                     <td>{transaction.shipper}</td>
                     <td>{transaction.consignee}</td>
@@ -139,6 +140,14 @@ class Dashboard extends Component {
 
         return (
             <div>
+                <div className="row">
+
+                    <div className="example-box-wrapper col-md-2 col-md-offset-10">
+                        <Link to="/contracts/create">
+                            <span className="btn btn-lg btn-primary right" title="">Create</span>
+                        </Link>
+                    </div>
+                </div>
                 <div id="page-title">
                     <h2>Overview bills of lading</h2>
                     <p>All your transactions are available below. These transactions are saved into a private
@@ -148,7 +157,7 @@ class Dashboard extends Component {
                 <div className="example-box-wrapper">
                     <table className="table table-hover">
                         <thead>
-                        <tr style={{ cursor: 'pointer' }}>
+                        <tr style={{cursor: 'pointer'}}>
                             <th>B/L No.<i className="fa fa-filter"></i></th>
                             <th>Shipper<i className="fa fa-filter"></i></th>
                             <th>Consignee<i className="fa fa-filter"></i></th>

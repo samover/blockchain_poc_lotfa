@@ -11,10 +11,10 @@ export const PageSideBar = () => {
                 <ul id="sidebar-menu" className="sf-js-enabled sf-arrows">
                     <li className="header"><span>Overview</span></li>
                     <li>
-                        <a href="index.html" title="Admin Dashboard" className="sfActive">
+                        <Link to="/">
                             <i className="glyph-icon fa fa-list"></i>
                             <span>Bills of lading</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="no-menu">
                         <Link to="/releases">

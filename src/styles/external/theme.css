@@ -28874,3 +28874,7 @@ body .popover.left .arrow:after {
         right: 24px
     }
 }
+
+.right {
+    float:right;
+}
