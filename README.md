@@ -6,6 +6,7 @@
 * make sure you have `node >6.9.1`
 * `yarn install`
 * `npm install -g truffle`
+* `npm install -g ethereumjs-testrpc`
 * `node server.js`
 * `truffle migrate`
 * `truffle build`
