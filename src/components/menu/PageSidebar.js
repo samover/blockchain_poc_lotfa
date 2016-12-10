@@ -1,4 +1,6 @@
 import React from 'react';
+import AuthService from '../../services/AuthService';
+import { Link } from 'react-router';
 
 export const PageSideBar = () => {
     return (
@@ -29,10 +31,10 @@ export const PageSideBar = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#" title="Dashboard boxes">
+                        <Link to="login" onClick={AuthService.logout()}>
                             <i className="glyph-icon fa fa-sign-out"></i>
                             <span>Logout</span>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 
