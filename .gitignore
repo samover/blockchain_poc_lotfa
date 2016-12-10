@@ -1,3 +1,2 @@
 build/
-rpc_test/
-Dockerfile
+node_modules/
