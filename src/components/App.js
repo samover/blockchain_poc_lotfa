@@ -11,6 +11,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 class App extends Component {
     render() {
+
         return (
             <MuiThemeProvider>
                 <div className="body">
