@@ -1,7 +1,6 @@
 var accounts;
 var account;
 
-console.log(MetaCoin.deployed());
 function setStatus(message) {
   var status = document.getElementById("status");
   status.innerHTML = message;
@@ -54,9 +53,8 @@ window.onload = function() {
       return;
     }
 
-      console.log('@@@@@@ accs: ', accs);
     accounts = accs;
-    account = accounts[3];
+    account = accounts[0];
 
     refreshBalance();
   });
