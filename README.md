@@ -1,6 +1,6 @@
 # HACK THE PORT
-## iCapps BL on BlockChaing POC
+## iCapps Bill of Lading on BlockChain POC
 
 ## Development Requirements
-* test chain: https://github.com/ethereumjs/testrpc
-* `truffle`
+* test ethereum RPC client: https://github.com/ethereumjs/testrpc
+* `truffle`: http://truffle.readthedocs.io/en/latest/
