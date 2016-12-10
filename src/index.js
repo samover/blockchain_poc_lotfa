@@ -7,10 +7,11 @@ import Login from "./components/Login";
 import AuthService from './services/AuthService';
 import Contract from './components/Contract';
 import ReleaseRequests from './components/ReleaseRequests';
+import ContractCreator from "./components/ContractCreator";
 
-// start authentication service
 var authenticationService = new AuthService();
 authenticationService.init();
+
 
 ReactDOM.render(
     <Router history={hashHistory}>
@@ -18,6 +19,7 @@ ReactDOM.render(
             <IndexRoute component={Dashboard}/>
             <Route path="/release-requests" component={ReleaseRequests}/>
             <Route path="/contracts/view/:id" component={Contract}/>
+            <Route path="/contracts/create" component={ContractCreator}/>
         </Route>
         <Route path="/login" component={Login}/>
     </Router>,

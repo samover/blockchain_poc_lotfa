@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 
 export const PageSideBar = () => {
     return (
-        <div id="page-sidebar" style={{ height: '1797px' }}>
-            <div className="scroll-sidebar" style={{ height: '1797px' }}>
+        <div id="page-sidebar" style={{height: '1797px'}}>
+            <div className="scroll-sidebar" style={{height: '1797px'}}>
 
 
                 <ul id="sidebar-menu" className="sf-js-enabled sf-arrows">
