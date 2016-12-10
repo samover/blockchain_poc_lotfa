@@ -25,3 +25,7 @@
 .loader-inner.line-scale > div {
     background: #2a3f54;
 }
+
+.margin-md-top{
+    margin-top: 20px !important;
+}
