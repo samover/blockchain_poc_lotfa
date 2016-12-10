@@ -16,11 +16,8 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Dashboard}/>
-<<<<<<< Updated upstream
             <Route path="/contracts/view/:id" component={Contract}/>
-=======
-            <Route path="/bl/create" component={ContractCreator}/>
->>>>>>> Stashed changes
+            <Route path="/contracts/create" component={ContractCreator}/>
         </Route>
         <Route path="/login" component={Login}/>
     </Router>,
