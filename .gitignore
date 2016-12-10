@@ -1,5 +1,10 @@
 build/
+<<<<<<< HEAD
 rpc_test/
 Dockerfile
 node_modules
 .idea
+=======
+node_modules/
+.idea
+>>>>>>> b7b2222aabaa12b936fbab31e0be5e28732cb55c
