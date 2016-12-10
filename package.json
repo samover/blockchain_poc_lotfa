@@ -1,0 +1,11 @@
+{
+  "name": "icapps_bl_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:icapps/LOTFA_poc.git",
+  "author": "samover <samuel.overloop@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ethereumjs-testrpc": "^3.0.3"
+  }
+}
