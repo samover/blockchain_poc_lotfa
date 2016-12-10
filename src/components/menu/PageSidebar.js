@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 
 export const PageSideBar = () => {
     return (
-        <div id="page-sidebar" style={{ height: '1797px' }}>
-            <div className="scroll-sidebar" style={{ height: '1797px' }}>
+        <div id="page-sidebar" style={{height: '1797px'}}>
+            <div className="scroll-sidebar" style={{height: '1797px'}}>
 
 
                 <ul id="sidebar-menu" className="sf-js-enabled sf-arrows">
@@ -17,10 +17,11 @@ export const PageSideBar = () => {
                         </a>
                     </li>
                     <li className="no-menu">
-                        <a href="../frontend-template/index.html" title="Frontend template" className="sfActive">
+                        <Link to="/bl/create">
                             <i className="glyph-icon fa fa-plus-square"></i>
                             <span>Release requests</span>
                         </a>
+
                     </li>
                     <li>
                         <a href="#" title="Elements">

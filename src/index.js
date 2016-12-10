@@ -6,16 +6,21 @@ import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import AuthService from './services/AuthService';
 import Contract from './components/Contract';
+import ContractCreator from "./components/ContractCreator";
 
-// start authentication service
 var authenticationService = new AuthService();
 authenticationService.init();
+
 
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Dashboard}/>
+<<<<<<< Updated upstream
             <Route path="/contracts/view/:id" component={Contract}/>
+=======
+            <Route path="/bl/create" component={ContractCreator}/>
+>>>>>>> Stashed changes
         </Route>
         <Route path="/login" component={Login}/>
     </Router>,
