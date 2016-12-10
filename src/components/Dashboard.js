@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, { Component } from 'react';
 
 class Dashboard extends Component {
     constructor() {
         super();
-        this.state = { }
+        this.state = {}
     }
 
     componentDidMount() {
@@ -12,8 +12,8 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div id="dashboard">
-                Dit is dashboard
+            <div>
+                Dit is het dashboard
             </div>
         );
     }

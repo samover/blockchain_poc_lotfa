@@ -18,8 +18,10 @@ class App extends Component {
                     <div className="main_container">
                         <PageHeader />
                         <PageSidebar />
-                        <div className="right_col" role="main" style={{ minHeight: '1500px' }}>
-                            {this.props.children}
+                        <div id="page-content-wrapper">
+                            <div id="page-content" style={{ height: '1794px' }}>
+                                {this.props.children}
+                            </div>
                         </div>
                     </div>
                 </div>
