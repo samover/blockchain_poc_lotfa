@@ -26,4 +26,4 @@ export const cFetch = (path, options) => {
     return fetch(getBackendPath() + path, options);
 };
 
-export const BackendPath = getBackendPath();
+export const backendPath = getBackendPath();
