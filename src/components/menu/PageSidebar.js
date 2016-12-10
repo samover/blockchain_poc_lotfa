@@ -17,10 +17,10 @@ export const PageSideBar = () => {
                         </a>
                     </li>
                     <li className="no-menu">
-                        <Link to="/contracts/create">
+                        <Link to="/releases">
                             <i className="glyph-icon fa fa-plus-square"></i>
                             <span>Release requests</span>
-                        </a>
+                        </Link>>
 
                     </li>
                     <li>
