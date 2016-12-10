@@ -129,7 +129,7 @@ class ReleaseRequests extends Component {
                         <td>{transaction.notify_address}</td>
                         <td>{transaction.vessel}</td>
                         <td>{transaction.port}</td>
-                        <td>{transaction.freight}</td>
+                        <td>€ {transaction.freight}</td>
                         <td><i className="fa fa-2x fa-check"></i></td>
                     </tr>
                 );
@@ -142,7 +142,7 @@ class ReleaseRequests extends Component {
                         <td>{transaction.notify_address}</td>
                         <td>{transaction.vessel}</td>
                         <td>{transaction.port}</td>
-                        <td>{transaction.freight}</td>
+                        <td>€ {transaction.freight}</td>
                         <td><i className="fa fa-2x fa-times"></i></td>
                     </tr>
                 );
