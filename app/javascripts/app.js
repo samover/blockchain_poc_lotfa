@@ -1,5 +1,6 @@
 var accounts;
 var account;
+var recipients;
 
 function setStatus(message) {
   var status = document.getElementById("status");
@@ -9,12 +10,11 @@ function setStatus(message) {
 function refreshBalance() {
   var meta = MetaCoin.deployed();
 
-      accounts.forEach(function(acc) {
-          meta.getBalance.call(acc, { from: acc  }).then(val => {
-              console.log('@@@@@ acc: ', acc);
-              console.log('@@@@@ val: ', val.valueOf());
-          });
-      })
+    recipients.forEach(function(acc) {
+        meta.getBalance.call(acc, { from: acc  }).then(val => {
+            console.log(`${acc}: ${val.valueOf()}`);
+        });
+    })
   meta.getBalance.call(account, {from: account}).then(function(value) {
     var balance_element = document.getElementById("balance");
     balance_element.innerHTML = value.valueOf();
@@ -55,7 +55,7 @@ window.onload = function() {
 
     accounts = accs;
     account = accounts[0];
-
+    recipients = accounts.slice(1, accounts.length -1);
     refreshBalance();
   });
 }
