@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 build/
 <<<<<<< HEAD
 rpc_test/
@@ -8,3 +9,17 @@ node_modules
 node_modules/
 .idea
 >>>>>>> b7b2222aabaa12b936fbab31e0be5e28732cb55c
+=======
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+.idea
+# dependencies
+node_modules
+
+# production
+build
+
+# misc
+.DS_Store
+npm-debug.log
+>>>>>>> Stashed changes
