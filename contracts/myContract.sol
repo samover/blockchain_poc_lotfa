@@ -2,31 +2,33 @@ pragma solidity ^0.4.4;
 
 contract MyContract {
     address owner;
-    address seller;
-    address shipper;
-    address notifier;
-    address nullifies;
+    address receiver;
     string portOfArrival;
     string portOfDeparture;
-    string vessel;
-    bool transferable;
-    int blNumber;
-    struct ContentItem {
-        int quantity;
-        string name;
-    }
-    struct Content {
-        ContentItem[] contentItem;
-    }
-    int price;
-    int timeOfArrival;
+
+    mapping (address => uint) public coinBalanceOf;
+
+    event BLInitator(address sender, address receiver, uint amount);
 
     function MyContract() {
         owner = msg.sender;
     }
 
-    function getOwner() returns (address) {
-        return owner;
+    function addBillOfLadingData(string portOfArrival, string portOfDeparture) {
+        portOfArrival = portOfArrival;
+        portOfDeparture = portOfDeparture;
+    }
+
+    function sendBillOfLading(address receiver) {
+        return
+    }
+
+    function sendCoin(address receiver, uint amount) returns(bool sufficient) {
+        if (coinBalanceOf[msg.sender] < amount) return false;
+        coinBalanceOf[msg.sender] -= amount;
+        coinBalanceOf[receiver] += amount;
+        CoinTransfer(msg.sender, receiver, amount);
+        return true;
     }
 
     function kill() {

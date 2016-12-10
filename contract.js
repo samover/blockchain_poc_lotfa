@@ -8,12 +8,11 @@
 
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
+var fs = require('fs');
+var path = require('path');
 
-const Web3 = require('web3');
-const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-//const web3 = new Web3(new Web3.providers.HttpProvider("http://188.166.71.109:5000"));
+var Web3 = require('web3');
+var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 if (!web3.isConnected()) {
     console.info('Please start your blockchain');
     process.exit(1);
@@ -22,44 +21,48 @@ if (!web3.isConnected()) {
 console.info('Connected...');
 
 function init() {
-    fs.readFile(path.join(__dirname, 'contracts/myContract.sol'), 'utf-8', (err, result) => {
-        const contractSource = result.replace(/\n/g, '');
-        const contractCompiled = web3.eth.compile.solidity(contractSource);
-        const myContract = web3.eth.contract(contractCompiled.MyContract.info.abiDefinition);
-        const contractData = myContract.getData({ data: contractCompiled.MyContract.info.abiDefinition });
-        const gasEstimate = web3.eth.estimateGas({data: contractData});
+    return new Promise((resolve, reject) => {
+        fs.readFile(path.join(__dirname, 'contracts/container.sol'), 'utf-8', (err, result) => {
+            var contractSource = result.replace(/\n/g, '');
+            var contractCompiled = web3.eth.compile.solidity(contractSource);
+            var myContract = web3.eth.contract(contractCompiled.Container.info.abiDefinition);
+            var contractData = myContract.getData({ data: contractCompiled.Container.info.abiDefinition });
+            var gasEstimate = web3.eth.estimateGas({data: contractData});
 
-        const contractInstance = myContract.new({ from: web3.eth.accounts[0], gas: gasEstimate + 300000}, function (e, contract) {
-            if (e) console.error(e);
-            if (!e) {
-
-                if (!contract.address) {
-                    console.log("Contract transaction send: TransactionHash: " + contract.transactionHash + " waiting to be mined...");
-                } else {
-                    console.log("Contract mined! Address: " + contract.address);
-                    console.log(contract);
-                    contract.transferOwner(web3.eth.accounts[1], function (err, newOwner) {
-                        console.log('new owner', err, newOwner);
-                        console.log(contractInstance.getOwner() === newOwner);
-                    });
+            var gasPrice = web3.eth.gasPrice;
+            var balance = web3.eth.getBalance(web3.eth.accounts[0]).valueOf();
+            var balance2 = web3.eth.getBalance(web3.eth.accounts[1]).valueOf();
+            console.log('balance: ', balance);
+            console.log('balance2: ', balance2);
+            console.log('gasPrice '+gasPrice.toString(10));
+            console.log('gas Estimate '+gasEstimate);
+            var total = gasEstimate*gasPrice;
+            var supply = 2000;
+            var contractInstance = myContract.new(supply, { from: web3.eth.accounts[0], data: contractCompiled.Container.code, gas: gasEstimate + 300000 }, function (e, contract) {
+                if (e) {
+                    console.error(e);
+                    reject(e);
                 }
-            }
-        });
-
-        var filter = web3.eth.filter('latest');
-
-        filter.watch(function (error, result) {
-
-            var block = web3.eth.getBlock(result, true);
-            console.log(block.number);
-
-            for (var index = 0; index < block.transactions.length; index++) {
-                var t = block.transactions[index];
-                console.log('transaction found', t.hash);
-            }
-
+                if (!e) {
+                    if (!contract.address) {
+                        console.log("Contract transaction send: TransactionHash: " + contract.transactionHash + " waiting to be mined...");
+                    } else {
+                        console.log("Contract mined! Address: " + contract.address);
+                        resolve(contract);
+                    }
+                }
+            });
         });
     });
 }
 
-return init();
+return init()
+    .then(contract => {
+        //console.log(contract.whitelist);
+        const test = contract.specifyLoading(web3.eth.accounts[0], 'Some stuff');
+        console.log(contract.contentDescription);
+    })
+    .catch((err) => {
+        console.error(err);
+        console.info(err.stack);
+    });
