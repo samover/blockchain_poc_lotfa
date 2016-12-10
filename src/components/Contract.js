@@ -29,7 +29,7 @@ class Contract extends Component {
                     {
                         date: '01/12/2016 - 16:51',
                         action: 'Signed bill of lading at departure of the vessel',
-                        performed_by: 'Maarten Stanckaert',
+                        performed_by: 'Maarten Awkward',
                         fnction: 'Master'
                     },
                     {
@@ -55,7 +55,7 @@ class Contract extends Component {
                     {
                         date: '01/12/2016 - 14:44',
                         description: 'Contents of container damaged',
-                        remarked: 'Maarten Stanckaert',
+                        remarked: 'Maarten Awkward',
                         fnction: 'Consignee'
                     }
                 ]
