@@ -41,6 +41,13 @@ function sendCoin() {
   });
 };
 
+
+function createContract(){
+
+}
+
+
+// On load
 window.onload = function() {
   web3.eth.getAccounts(function(err, accs) {
     if (err != null) {
