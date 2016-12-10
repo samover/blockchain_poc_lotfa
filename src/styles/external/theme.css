@@ -27587,6 +27587,7 @@ ul.todo-box {
 
 #header-logo {
     width: 260px;
+    padding-top:10px;
     text-align: center;
     font-size: 16px;
     float: left;

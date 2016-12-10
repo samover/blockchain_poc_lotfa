@@ -15,7 +15,7 @@ class App extends Component {
         return (
             <MuiThemeProvider>
                 <div className="body">
-                    <div className="main_container">
+                    <div id="page-wrapper" className="main_container">
                         <PageHeader />
                         <PageSidebar />
                         <div id="page-content-wrapper">
