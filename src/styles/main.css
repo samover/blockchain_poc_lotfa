@@ -26,6 +26,6 @@
     background: #2a3f54;
 }
 
-.header-login {
-  float: right;
+.margin-md-top{
+    margin-top: 20px !important;
 }
