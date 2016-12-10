@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Dashboard extends Component {
+class ReleaseRequests extends Component {
     constructor() {
         super();
         this.state = { transactions: [] };
@@ -8,10 +8,6 @@ class Dashboard extends Component {
 
     componentDidMount() {
         this.getTransactions();
-    }
-
-    goToContract(transaction) {
-        this.props.history.push('contracts/view/' + transaction.id);
     }
 
     getTransactions() {
@@ -24,8 +20,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '0',
+                    manifest: true
                 },
                 {
                     id: 123457,
@@ -33,8 +30,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '0',
+                    manifest: true
                 },
                 {
                     id: 123458,
@@ -42,8 +40,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '1.000',
+                    manifest: false
                 },
                 {
                     id: 123459,
@@ -51,8 +50,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '0',
+                    manifest: true
                 },
                 {
                     id: 123460,
@@ -60,8 +60,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '0',
+                    manifest: true
                 },
                 {
                     id: 123461,
@@ -69,8 +70,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '0',
+                    manifest: true
                 },
                 {
                     id: 123462,
@@ -78,8 +80,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '1.000',
+                    manifest: false
                 },
                 {
                     id: 123463,
@@ -87,8 +90,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '0',
+                    manifest: true
                 },
                 {
                     id: 123464,
@@ -96,8 +100,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '1.0000',
+                    manifest: false
                 },
                 {
                     id: 123465,
@@ -105,17 +110,9 @@ class Dashboard extends Component {
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
                     vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
-                },
-                {
-                    id: 123466,
-                    shipper: 'iCapps BVBA',
-                    consignee: 'Hangar 26/27',
-                    notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
-                    port_of_loading: 'Antwerp, BE',
-                    port_of_discharge: 'Shanghai, CN'
+                    port: 'Antwerp, BE',
+                    freight: '0',
+                    manifest: true
                 }
             ]
         });
@@ -123,30 +120,45 @@ class Dashboard extends Component {
 
     render() {
         var transactions = this.state.transactions.map((transaction, i) => {
-            return (
-                <tr key={i} onClick={this.goToContract.bind(this, transaction)} style={{ cursor: 'pointer' }}>
-                    <td>{transaction.id}</td>
-                    <td>{transaction.shipper}</td>
-                    <td>{transaction.consignee}</td>
-                    <td>{transaction.notify_address}</td>
-                    <td>{transaction.vessel}</td>
-                    <td>{transaction.port_of_loading}</td>
-                    <td>{transaction.port_of_discharge}</td>
-                    <td><i className="fa fa-pencil"></i></td>
-                </tr>
-            );
+            if (transaction.manifest === true) {
+                return (
+                    <tr key={i}>
+                        <td>{transaction.id}</td>
+                        <td>{transaction.shipper}</td>
+                        <td>{transaction.consignee}</td>
+                        <td>{transaction.notify_address}</td>
+                        <td>{transaction.vessel}</td>
+                        <td>{transaction.port}</td>
+                        <td>{transaction.freight}</td>
+                        <td><i className="fa fa-2x fa-check"></i></td>
+                    </tr>
+                );
+            } else {
+                return (
+                    <tr key={i} className="no-manifest">
+                        <td>{transaction.id}</td>
+                        <td>{transaction.shipper}</td>
+                        <td>{transaction.consignee}</td>
+                        <td>{transaction.notify_address}</td>
+                        <td>{transaction.vessel}</td>
+                        <td>{transaction.port}</td>
+                        <td>{transaction.freight}</td>
+                        <td><i className="fa fa-2x fa-times"></i></td>
+                    </tr>
+                );
+            }
         });
 
         return (
             <div>
                 <div id="page-title">
-                    <h2>Overview bills of lading</h2>
-                    <p>All your transactions are available below. These transactions are saved into a private
+                    <h2>Release requests</h2>
+                    <p>All your release requests are available below. These transactions are saved into a private
                         blockhain. </p>
                 </div>
 
-                <div className="example-box-wrapper">
-                    <table className="table table-hover">
+                <div className="example-box-wrapper ">
+                    <table className="table">
                         <thead>
                         <tr style={{ cursor: 'pointer' }}>
                             <th>B/L No.<i className="fa fa-filter"></i></th>
@@ -154,8 +166,9 @@ class Dashboard extends Component {
                             <th>Consignee<i className="fa fa-filter"></i></th>
                             <th>Notify address<i className="fa fa-filter"></i></th>
                             <th>Vessel<i className="fa fa-filter"></i></th>
-                            <th>Port of loading<i className="fa fa-filter"></i></th>
-                            <th>Port of discharge<i className="fa fa-filter"></i></th>
+                            <th>Port<i className="fa fa-filter"></i></th>
+                            <th>Freight payable</th>
+                            <th>Manifest OK?</th>
                             <th></th>
                         </tr>
                         </thead>
@@ -169,4 +182,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default ReleaseRequests;

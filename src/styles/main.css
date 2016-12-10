@@ -48,6 +48,11 @@ body, html {
     padding-top: 20px !important;
 }
 
+.bill-container table {
+    padding-bottom: 40px !important;
+    margin-bottom: 0 !important;
+}
+
 .bill-container h2 {
     font-size: 2.5em !important;
 }
@@ -55,6 +60,10 @@ body, html {
 .bill-container table td, .bill-container table th {
     padding-left: 50px !important;
     padding-right: 50px !important;
+}
+
+tr.no-manifest{
+    background-color: #ffdde5 !important;
 }
 
 .bold {
@@ -77,7 +86,7 @@ body, html {
     width: 100%;
 }
 
-.bill-container h3{
+.bill-container h3 {
     font-size: 1.2em;
     padding-bottom: 10px;
     padding-left: 50px;

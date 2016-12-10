@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import AuthService from './services/AuthService';
 import Contract from './components/Contract';
+import ReleaseRequests from './components/ReleaseRequests';
 
 // start authentication service
 var authenticationService = new AuthService();
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Dashboard}/>
+            <Route path="/release-requests" component={ReleaseRequests}/>
             <Route path="/contracts/view/:id" component={Contract}/>
         </Route>
         <Route path="/login" component={Login}/>
