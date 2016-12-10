@@ -12,24 +12,29 @@ export const PageSideBar = () => {
                     <li className="header"><span>Overview</span></li>
                     <li>
                         <a href="index.html" title="Admin Dashboard" className="sfActive">
-                            <i className="glyph-icon fa fa-tachometer"></i>
-                            <span>Admin dashboard</span>
+                            <i className="glyph-icon fa fa-list"></i>
+                            <span>Bills of lading</span>
                         </a>
                     </li>
-                    <li className="divider"></li>
                     <li className="no-menu">
                         <a href="../frontend-template/index.html" title="Frontend template" className="sfActive">
                             <i className="glyph-icon fa fa-plus-square"></i>
-                            <span>Add a new contract</span>
+                            <span>Release requests</span>
                         </a>
                     </li>
-                    <li className="header margin-md-top"><span>Settings & Preferences</span></li>
                     <li>
                         <a href="#" title="Elements">
                             <i className="glyph-icon fa fa-user"></i>
-                            <span>My account</span>
+                            <span>Address book</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="#" title="Elements">
+                            <i className="glyph-icon fa fa-archive"></i>
+                            <span>Archive</span>
+                        </a>
+                    </li>
+                    <li className="divider"></li>
                     <li>
                         <Link to="login" onClick={AuthService.logout()}>
                             <i className="glyph-icon fa fa-sign-out"></i>

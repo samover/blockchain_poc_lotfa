@@ -13,6 +13,10 @@ body {
     margin: 0
 }
 
+.fa-filter{
+    padding-left:10px;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block
 }
@@ -6624,7 +6628,7 @@ button.close {
 }
 
 .carousel-control.left {
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+    background-image: -webkit-linear-gradient(legt, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
     background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
@@ -12629,10 +12633,6 @@ h4.title-hero {
     font-style: italic
 }
 
-.font-none {
-    font-style: none
-}
-
 .clear {
     clear: both
 }
@@ -15619,6 +15619,7 @@ textarea.textarea-lg {
         -ms-transform: rotate(30deg);
         transform: rotate(30deg)
     }
+}
 
 @keyframes rise {
     50% {
@@ -15629,7 +15630,6 @@ textarea.textarea-lg {
     }
 }
 
-}
 @-webkit-keyframes fall {
     50% {
         -webkit-transform: rotate(-30deg);
@@ -15655,6 +15655,7 @@ textarea.textarea-lg {
         -ms-transform: rotate(-30deg);
         transform: rotate(-30deg)
     }
+}
 
 @keyframes fall {
     50% {
@@ -15665,7 +15666,6 @@ textarea.textarea-lg {
     }
 }
 
-}
 @-webkit-keyframes fade {
     50% {
         opacity: .5
@@ -15691,6 +15691,7 @@ textarea.textarea-lg {
     100% {
         opacity: 1
     }
+}
 
 @keyframes fade {
     50% {
@@ -15699,8 +15700,6 @@ textarea.textarea-lg {
     100% {
         opacity: 1
     }
-}
-
 }
 .nav {
     margin: 0;
@@ -19630,7 +19629,7 @@ table.fc-border-separate {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         -webkit-perspective: 1000;
-        perspective: 1000
+        perspective: 1000;
     }
 
     .carousel-inner > .item.active.right, .carousel-inner > .item.next {
@@ -27848,8 +27847,8 @@ body #nav-toggle.collapsed span, body #nav-toggle.collapsed span:after, body #na
     border-radius: 3px;
     font-size: 13px;
     border: 1px solid transparent;
-    line-height: 35px;
-    height: 36px
+    line-height: 40px;
+    height: 41px
 }
 
 #sidebar-menu > li > a .bs-badge, #sidebar-menu > li > a .bs-label {
@@ -27897,7 +27896,7 @@ body #nav-toggle.collapsed span, body #nav-toggle.collapsed span:after, body #na
 
 #page-sidebar li a .glyph-icon, #page-sidebar li ul li a:before {
     font-size: 18px;
-    line-height: 35px;
+    line-height: 41px;
     display: block;
     float: left;
     width: 30px;

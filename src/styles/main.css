@@ -33,3 +33,66 @@ body, html {
 .margin-md-top {
     margin-top: 20px !important;
 }
+
+.margin-md-bottom {
+    margin-bottom: 10px !important;
+}
+
+.full-width {
+    width: 100%;
+    display: inline-block;
+}
+
+.bill-container {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    padding-top: 20px !important;
+}
+
+.bill-container h2 {
+    font-size: 2.5em !important;
+}
+
+.bill-container table td, .bill-container table th {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+.bill-top-header {
+    font-size: 1.1em;
+    background-color: #f2f2f2;
+    padding: 40px !important;
+    display: inline-block;
+    width: 100%;
+}
+
+.bill-top-subheader {
+    font-size: 1.1em;
+    background-color: white;
+    padding: 20px 40px !important;
+    display: inline-block;
+    width: 100%;
+}
+
+.bill-container h3{
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    background-color: white;
+    font-weight: 900;
+}
+
+.bill-top-row {
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.bill-top-row > i {
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.5em;
+}

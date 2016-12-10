@@ -3,11 +3,15 @@ import React, { Component } from 'react';
 class Dashboard extends Component {
     constructor() {
         super();
-        this.state = { transactions: [] }
+        this.state = { transactions: [] };
     }
 
     componentDidMount() {
         this.getTransactions();
+    }
+
+    goToContract(transaction) {
+        this.props.history.push('contracts/view/' + transaction.id);
     }
 
     getTransactions() {
@@ -15,16 +19,103 @@ class Dashboard extends Component {
         this.setState({
             transactions: [
                 {
-                    block: 'jfsdfkjhsdfhsdkjf212#edesf',
-                    description: 'A shipment was received on 15/10/2016 at 03:20:21'
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
                 },
                 {
-                    block: 'arze2135#21edzae#edesf',
-                    description: 'A shipment was sent on 15/10/2016 at 03:20:30'
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
                 },
                 {
-                    block: '823jklf#lkfjsdlkgjdfgkljdf',
-                    description: 'A shipment was received on 15/10/2016 at 03:20:43'
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
+                },
+                {
+                    id: 123456,
+                    shipper: 'iCapps BVBA',
+                    consignee: 'Hanagar 26/27',
+                    notify_address: 'Rijnkaai 101',
+                    vessel: 'M.S. Danielle',
+                    port_of_loading: 'Antwerp, BE',
+                    port_of_discharge: 'Shanghai, CN'
                 }
             ]
         });
@@ -33,9 +124,15 @@ class Dashboard extends Component {
     render() {
         var transactions = this.state.transactions.map((transaction, i) => {
             return (
-                <tr key={i}>
-                    <td>{transaction.block}</td>
-                    <td>{transaction.description}</td>
+                <tr key={i} onClick={this.goToContract.bind(this, transaction)} style={{ cursor: 'pointer' }}>
+                    <td>{transaction.id + i}</td>
+                    <td>{transaction.shipper}</td>
+                    <td>{transaction.consignee}</td>
+                    <td>{transaction.notify_address}</td>
+                    <td>{transaction.vessel}</td>
+                    <td>{transaction.port_of_loading}</td>
+                    <td>{transaction.port_of_discharge}</td>
+                    <td><i className="fa fa-pencil"></i></td>
                 </tr>
             );
         });
@@ -43,7 +140,7 @@ class Dashboard extends Component {
         return (
             <div>
                 <div id="page-title">
-                    <h2>Overview</h2>
+                    <h2>Overview bills of lading</h2>
                     <p>All your transactions are available below. These transactions are saved into a private
                         blockhain. </p>
                 </div>
@@ -51,9 +148,15 @@ class Dashboard extends Component {
                 <div className="example-box-wrapper">
                     <table className="table table-hover">
                         <thead>
-                        <tr>
-                            <th>Block</th>
-                            <th>Description</th>
+                        <tr style={{ cursor: 'pointer' }}>
+                            <th>B/L No.<i className="fa fa-filter"></i></th>
+                            <th>Shipper<i className="fa fa-filter"></i></th>
+                            <th>Consignee<i className="fa fa-filter"></i></th>
+                            <th>Notify address<i className="fa fa-filter"></i></th>
+                            <th>Vessel<i className="fa fa-filter"></i></th>
+                            <th>Port of loading<i className="fa fa-filter"></i></th>
+                            <th>Port of discharge<i className="fa fa-filter"></i></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>

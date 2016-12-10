@@ -8,9 +8,6 @@ export const PageHeader = () => {
                 <h2>LOTFA</h2>
                 <h2>iCapps</h2>
             </div>
-            <div className="header-login">
-              <Link to="login">Login</Link>
-            </div>
         </div>
     )
 }
