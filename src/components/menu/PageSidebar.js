@@ -20,7 +20,7 @@ export const PageSideBar = () => {
                         <Link to="/releases">
                             <i className="glyph-icon fa fa-plus-square"></i>
                             <span>Release requests</span>
-                        </Link>>
+                        </Link>
 
                     </li>
                     <li>
