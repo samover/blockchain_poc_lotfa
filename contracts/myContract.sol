@@ -21,9 +21,8 @@ contract MyContract {
     int price;
     int timeOfArrival;
 
-    function MyContract(uint price) {
+    function MyContract() {
         owner = msg.sender;
-        price = price;
     }
 
     function getOwner() returns (address) {
