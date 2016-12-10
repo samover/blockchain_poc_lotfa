@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router';
 
 class ContractCreator extends Component {
     constructor() {
@@ -329,7 +330,9 @@ class ContractCreator extends Component {
                             </h3>
                             <div className="example-box-wrapper col-md-3 col-md-offset-9">
                                 <a href className="btn btn-lg btn-default mrg15R" title="">Save draft</a>
-                                <a href className="btn btn-lg btn-primary" title="">Send</a>
+                                <Link to="/">
+                                    <span className="btn btn-lg btn-primary" title="">Send</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
