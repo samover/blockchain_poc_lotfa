@@ -17,7 +17,7 @@ export const Menu = () => {
                     <div className="menu_section active">
                         <h3>General</h3>
                         <ul className="nav side-menu">
-                            <li><Link activeClassName="active" to="dashboard"><i className="fa fa-home"/> Home</Link></li>
+                            <li><Link activeClassName="active" to=""><i className="fa fa-home"/> Home</Link></li>
                         </ul>
                     </div>
                 </div>
