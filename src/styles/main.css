@@ -1,3 +1,8 @@
+body, html {
+    height: 100%;
+    background: #fff;
+}
+
 .App {
     text-align: center;
 }
@@ -9,14 +14,13 @@
     color: white;
 }
 
-
-.min-md{
+.min-md {
     min-height: 100px;
     vertical-align: middle;
 }
 
 /* Loaders */
-.loader-inner.line-scale{
+.loader-inner.line-scale {
     display: table;
     margin: 0 auto;
     width: 50px;
@@ -26,6 +30,6 @@
     background: #2a3f54;
 }
 
-.margin-md-top{
+.margin-md-top {
     margin-top: 20px !important;
 }

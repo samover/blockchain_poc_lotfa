@@ -4,7 +4,7 @@ import AuthService from '../services/AuthService';
 class Login extends React.Component {
     constructor() {
         super();
-        this.state = { username: '', password: '' };
+        this.state = { username: 'developer@lofta.be', password: 'prutser123' };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,7 +40,7 @@ class Login extends React.Component {
                 <div className="center-content row">
                     <form onSubmit={this.handleSubmit} id="login-validation"
                           className="col-md-4 col-sm-5 col-xs-11 col-lg-3 center-margin">
-                        <h3 className="text-center pad25B font-gray text-transform-upr font-size-23">Monarch Admin <span
+                        <h3 className="text-center pad25B font-gray text-transform-upr font-size-23">LOFTA Blockhain <span
                             className="opacity-80">v1.0</span></h3>
                         <div id="login-form" className="content-box bg-default">
                             <div className="content-box-wrapper pad20A">
