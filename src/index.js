@@ -9,8 +9,8 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Dashboard}/>
-            <Route path="login" component={Login}/>
         </Route>
+        <Route path="/login" component={Login}/>
     </Router>,
     document.getElementById('root')
 );

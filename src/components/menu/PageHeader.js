@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export const PageHeader = () => {
     return (
@@ -6,6 +7,9 @@ export const PageHeader = () => {
             <div id="header-logo" className="logo-bg">
                 <h2>LOTFA</h2>
                 <h2>iCapps</h2>
+            </div>
+            <div className="header-login">
+              <Link to="login">Login</Link>
             </div>
         </div>
     )

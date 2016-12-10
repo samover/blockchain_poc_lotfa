@@ -25,3 +25,7 @@
 .loader-inner.line-scale > div {
     background: #2a3f54;
 }
+
+.header-login {
+  float: right;
+}
