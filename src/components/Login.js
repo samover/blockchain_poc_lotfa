@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class Dashboard extends Component {
+class Login extends Component {
     constructor() {
         super();
         this.state = { }
@@ -12,11 +12,11 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div id="dashboard">
-              Dashboard
+            <div id="login">
+              Login
             </div>
         );
     }
 }
 
-export default Dashboard;
+export default Login;
