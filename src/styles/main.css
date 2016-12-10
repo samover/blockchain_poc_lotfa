@@ -66,6 +66,19 @@ tr.no-manifest{
     background-color: #ffdde5 !important;
 }
 
+.search{
+    width: 100%;
+    margin: 20px auto 50px auto;
+    padding: 0;
+    line-height: 34px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.search i {
+    padding-right:10px;
+}
+
 .bold {
     font-weight: 700 !important;
 }

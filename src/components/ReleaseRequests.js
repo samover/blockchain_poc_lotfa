@@ -155,6 +155,16 @@ class ReleaseRequests extends Component {
                     <h2>Release requests</h2>
                     <p>All your release requests are available below. These transactions are saved into a private
                         blockhain. </p>
+                    <div className="search">
+                        <label className="col-sm-1 control-label">
+                            <i className="fa fa-search"></i>
+                            <span>Search</span>
+                        </label>
+                        <div className="col-sm-3">
+                            <input type="text" className="form-control" id=""
+                                   placeholder="Enter your search term"/>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="example-box-wrapper ">

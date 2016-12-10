@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 class Dashboard extends Component {
     constructor() {
         super();
-        this.state = {transactions: []};
+        this.state = { transactions: [] };
     }
 
     componentDidMount() {
@@ -142,23 +142,35 @@ class Dashboard extends Component {
         return (
             <div>
                 <div className="row">
+                    <div className="col-xs-12">
+                        <div className="example-box-wrapper pull-right">
+                            <Link to="/contracts/create">
+                                <span className="btn btn-lg btn-primary right" title="">Create</span>
+                            </Link>
+                        </div>
+                        <div id="page-title">
+                            <h2>Overview bills of lading</h2>
+                            <p>All your transactions are available below. These transactions are saved into a private
+                                blockhain. </p>
 
-                    <div className="example-box-wrapper col-md-2 col-md-offset-10">
-                        <Link to="/contracts/create">
-                            <span className="btn btn-lg btn-primary right" title="">Create</span>
-                        </Link>
+                            <div className="search">
+                                <label className="col-sm-1 control-label">
+                                    <i className="fa fa-search"></i>
+                                    <span>Search</span>
+                                </label>
+                                <div className="col-sm-3">
+                                    <input type="text" className="form-control" id=""
+                                           placeholder="Enter your search term"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="page-title">
-                    <h2>Overview bills of lading</h2>
-                    <p>All your transactions are available below. These transactions are saved into a private
-                        blockhain. </p>
                 </div>
 
                 <div className="example-box-wrapper">
                     <table className="table table-hover">
                         <thead>
-                        <tr style={{cursor: 'pointer'}}>
+                        <tr style={{ cursor: 'pointer' }}>
                             <th>B/L No.<i className="fa fa-filter"></i></th>
                             <th>Shipper<i className="fa fa-filter"></i></th>
                             <th>Consignee<i className="fa fa-filter"></i></th>
