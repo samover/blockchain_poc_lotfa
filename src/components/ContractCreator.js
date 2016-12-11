@@ -199,8 +199,8 @@ class ContractCreator extends Component {
                                                 <div className="col-sm-10">
                                                     <select className="form-control">
                                                         <option>The cargo arrives later than</option>
-                                                        <option>The cargo arrives later than</option>
-                                                        <option>The cargo arrives later than</option>
+                                                        <option>The ship arrives later than</option>
+                                                        <option>The confirmation arrives later than</option>
                                                     </select>
                                                 </div>
                                             </div>
