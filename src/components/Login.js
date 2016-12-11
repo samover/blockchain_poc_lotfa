@@ -4,7 +4,7 @@ import AuthService from '../services/AuthService';
 class Login extends React.Component {
     constructor() {
         super();
-        this.state = { username: 'developer@lofta.be', password: 'prutser123' };
+        this.state = { username: 'lotfa@icapps.be', password: 'prutser123' };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
