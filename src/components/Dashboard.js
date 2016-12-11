@@ -142,13 +142,13 @@ class Dashboard extends Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col-xs-12">
+                    <div className="col-xs-12 ">
                         <div className="example-box-wrapper pull-right">
                             <Link to="/contracts/create">
                                 <span className="btn btn-lg btn-primary right" title="">Create</span>
                             </Link>
                         </div>
-                        <div id="page-title">
+                        <div id="page-title col-xs-8">
                             <h2>Overview bills of lading</h2>
                             <p>All your transactions are available below. These transactions are saved into a private
                                 blockhain. </p>

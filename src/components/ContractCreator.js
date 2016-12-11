@@ -169,7 +169,7 @@ class ContractCreator extends Component {
                     <div className="panel col-md-5 col-md-offset-1">
                         <div className="panel-body">
                             <h3 className="title-hero">
-                                Vessel & ports
+                                Description of goods
                             </h3>
                             <div className="example-box-wrapper">
                                 <div className="form-group">
