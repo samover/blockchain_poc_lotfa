@@ -19,7 +19,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '0',
                     manifest: true
@@ -29,7 +29,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '0',
                     manifest: true
@@ -39,7 +39,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '1.000',
                     manifest: false
@@ -49,7 +49,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '0',
                     manifest: true
@@ -59,7 +59,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '0',
                     manifest: true
@@ -69,7 +69,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '0',
                     manifest: true
@@ -79,7 +79,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '1.000',
                     manifest: false
@@ -89,7 +89,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '0',
                     manifest: true
@@ -99,7 +99,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '1.0000',
                     manifest: false
@@ -109,7 +109,7 @@ class ReleaseRequests extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port: 'Antwerp, BE',
                     freight: '0',
                     manifest: true

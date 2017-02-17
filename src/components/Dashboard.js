@@ -24,7 +24,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -33,7 +33,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -42,7 +42,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -51,7 +51,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -60,7 +60,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -69,7 +69,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -78,7 +78,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -87,7 +87,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -96,7 +96,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -105,7 +105,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 },
@@ -114,7 +114,7 @@ class Dashboard extends Component {
                     shipper: 'iCapps BVBA',
                     consignee: 'Hangar 26/27',
                     notify_address: 'Rijnkaai 101',
-                    vessel: 'M.S. Danielle',
+                    vessel: 'M.S. iCapps',
                     port_of_loading: 'Antwerp, BE',
                     port_of_discharge: 'Shanghai, CN'
                 }

@@ -117,7 +117,7 @@ class Contract extends Component {
                             <p className="row bill-top-row">
                                 <i className="fa fa-ship col-xs-1"></i>
                                 <span className="col-xs-4">Vessel</span>
-                                <span className="col-xs-6">M.S. Danielle</span>
+                                <span className="col-xs-6">M.S. iCapps</span>
                             </p>
                             <p className="row bill-top-row">
                                 <i className="fa fa-map-marker col-xs-1"></i>

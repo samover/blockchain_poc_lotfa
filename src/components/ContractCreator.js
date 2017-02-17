@@ -80,7 +80,7 @@ class ContractCreator extends Component {
                                         <div className="col-sm-7">
                                             <div className="input-group">
                                                 <input type="text" className="form-control"
-                                                       defaultValue="M.S. Danielle"></input>
+                                                       defaultValue="M.S. iCapps"></input>
                                                 <span className="input-group-addon bg-blue">
                                                 <i className="glyph-icon icon-user"></i>
                                             </span>
